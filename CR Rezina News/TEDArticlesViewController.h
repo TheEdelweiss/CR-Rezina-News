@@ -1,5 +1,5 @@
 //
-//  TEDViewController.h
+//  TEDArticlesViewController.h
 //  CR Rezina News
 //
 //  Created by Stefan Popa on 27.12.12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TEDViewController : UIViewController
+@interface TEDArticlesViewController : UIViewController
 
 @end

@@ -8,17 +8,23 @@
 
 #import "TEDAppDelegate.h"
 
-#import "TEDViewController.h"
+#import "TEDMenuViewController.h"
 
 @implementation TEDAppDelegate
+
+@synthesize window = _window;
+@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+       
     // Override point for customization after application launch.
-    self.viewController = [[TEDViewController alloc] initWithNibName:@"TEDViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    self.viewController = [[TEDMenuViewController alloc] init];
+	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 

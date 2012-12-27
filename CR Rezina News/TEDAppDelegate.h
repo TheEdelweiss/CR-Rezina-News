@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class TEDViewController;
+@class TEDMenuViewController;
 
 @interface TEDAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) TEDViewController *viewController;
+@property (strong, nonatomic) TEDMenuViewController *viewController;
 
 @end

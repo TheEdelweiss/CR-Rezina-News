@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		447312D6168CF33A0035BC75 /* TEDArticlesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447312D4168CF33A0035BC75 /* TEDArticlesViewController.m */; };
+		447312D7168CF33A0035BC75 /* TEDArticlesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 447312D5168CF33A0035BC75 /* TEDArticlesViewController.xib */; };
+		447312EF168CFB9F0035BC75 /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 447312EE168CFB9F0035BC75 /* TKAlertCenter.m */; };
+		447312F2168CFC0C0035BC75 /* UIView+TKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 447312F1168CFC0C0035BC75 /* UIView+TKCategory.m */; };
+		44731300168CFE9C0035BC75 /* beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 447312FE168CFE9C0035BC75 /* beer.png */; };
+		44731301168CFE9C0035BC75 /* beer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 447312FF168CFE9C0035BC75 /* beer@2x.png */; };
+		44731304168D000E0035BC75 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44731303168D000E0035BC75 /* DejalActivityView.m */; };
 		44814EBE168CF03700E4E8C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44814EBD168CF03700E4E8C1 /* UIKit.framework */; };
 		44814EC0168CF03700E4E8C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44814EBF168CF03700E4E8C1 /* Foundation.framework */; };
 		44814EC2168CF03700E4E8C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44814EC1168CF03700E4E8C1 /* CoreGraphics.framework */; };
@@ -16,11 +23,27 @@
 		44814ED0168CF03700E4E8C1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 44814ECF168CF03700E4E8C1 /* Default.png */; };
 		44814ED2168CF03700E4E8C1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44814ED1168CF03700E4E8C1 /* Default@2x.png */; };
 		44814ED4168CF03700E4E8C1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44814ED3168CF03700E4E8C1 /* Default-568h@2x.png */; };
-		44814ED7168CF03700E4E8C1 /* TEDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44814ED6168CF03700E4E8C1 /* TEDViewController.m */; };
-		44814EDA168CF03700E4E8C1 /* TEDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44814ED8168CF03700E4E8C1 /* TEDViewController.xib */; };
+		44814ED7168CF03700E4E8C1 /* TEDMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44814ED6168CF03700E4E8C1 /* TEDMenuViewController.m */; };
+		44814EDA168CF03700E4E8C1 /* TEDMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44814ED8168CF03700E4E8C1 /* TEDMenuViewController.xib */; };
+		44814EEF168CF12800E4E8C1 /* NAMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 44814EE7168CF12800E4E8C1 /* NAMenuItem.m */; };
+		44814EF0168CF12800E4E8C1 /* NAMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44814EE9168CF12800E4E8C1 /* NAMenuItemView.m */; };
+		44814EF1168CF12800E4E8C1 /* NAMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44814EEA168CF12800E4E8C1 /* NAMenuItemView.xib */; };
+		44814EF2168CF12800E4E8C1 /* NAMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44814EEC168CF12800E4E8C1 /* NAMenuView.m */; };
+		44814EF3168CF12800E4E8C1 /* NAMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44814EEE168CF12800E4E8C1 /* NAMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		447312D3168CF33A0035BC75 /* TEDArticlesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEDArticlesViewController.h; sourceTree = "<group>"; };
+		447312D4168CF33A0035BC75 /* TEDArticlesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEDArticlesViewController.m; sourceTree = "<group>"; };
+		447312D5168CF33A0035BC75 /* TEDArticlesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TEDArticlesViewController.xib; sourceTree = "<group>"; };
+		447312ED168CFB9F0035BC75 /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertCenter.h; sourceTree = "<group>"; };
+		447312EE168CFB9F0035BC75 /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertCenter.m; sourceTree = "<group>"; };
+		447312F0168CFC0C0035BC75 /* UIView+TKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TKCategory.h"; sourceTree = "<group>"; };
+		447312F1168CFC0C0035BC75 /* UIView+TKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TKCategory.m"; sourceTree = "<group>"; };
+		447312FE168CFE9C0035BC75 /* beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer.png; sourceTree = "<group>"; };
+		447312FF168CFE9C0035BC75 /* beer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beer@2x.png"; sourceTree = "<group>"; };
+		44731302168D000E0035BC75 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		44731303168D000E0035BC75 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		44814EB9168CF03700E4E8C1 /* CR Rezina News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CR Rezina News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44814EBD168CF03700E4E8C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44814EBF168CF03700E4E8C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -34,9 +57,18 @@
 		44814ECF168CF03700E4E8C1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		44814ED1168CF03700E4E8C1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		44814ED3168CF03700E4E8C1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		44814ED5168CF03700E4E8C1 /* TEDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEDViewController.h; sourceTree = "<group>"; };
-		44814ED6168CF03700E4E8C1 /* TEDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEDViewController.m; sourceTree = "<group>"; };
-		44814ED9168CF03700E4E8C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TEDViewController.xib; sourceTree = "<group>"; };
+		44814ED5168CF03700E4E8C1 /* TEDMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEDMenuViewController.h; sourceTree = "<group>"; };
+		44814ED6168CF03700E4E8C1 /* TEDMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEDMenuViewController.m; sourceTree = "<group>"; };
+		44814ED9168CF03700E4E8C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TEDMenuViewController.xib; sourceTree = "<group>"; };
+		44814EE6168CF12800E4E8C1 /* NAMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAMenuItem.h; sourceTree = "<group>"; };
+		44814EE7168CF12800E4E8C1 /* NAMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAMenuItem.m; sourceTree = "<group>"; };
+		44814EE8168CF12800E4E8C1 /* NAMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAMenuItemView.h; sourceTree = "<group>"; };
+		44814EE9168CF12800E4E8C1 /* NAMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAMenuItemView.m; sourceTree = "<group>"; };
+		44814EEA168CF12800E4E8C1 /* NAMenuItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NAMenuItemView.xib; sourceTree = "<group>"; };
+		44814EEB168CF12800E4E8C1 /* NAMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAMenuView.h; sourceTree = "<group>"; };
+		44814EEC168CF12800E4E8C1 /* NAMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAMenuView.m; sourceTree = "<group>"; };
+		44814EED168CF12800E4E8C1 /* NAMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAMenuViewController.h; sourceTree = "<group>"; };
+		44814EEE168CF12800E4E8C1 /* NAMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +85,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		447312D9168CF63C0035BC75 /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+				447312D5168CF33A0035BC75 /* TEDArticlesViewController.xib */,
+				44814ED8168CF03700E4E8C1 /* TEDMenuViewController.xib */,
+			);
+			name = NIBs;
+			sourceTree = "<group>";
+		};
+		447312EB168CFB9F0035BC75 /* DejalActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				44731302168D000E0035BC75 /* DejalActivityView.h */,
+				44731303168D000E0035BC75 /* DejalActivityView.m */,
+			);
+			path = DejalActivityView;
+			sourceTree = "<group>";
+		};
+		447312EC168CFB9F0035BC75 /* TKAlertCenter */ = {
+			isa = PBXGroup;
+			children = (
+				447312F0168CFC0C0035BC75 /* UIView+TKCategory.h */,
+				447312F1168CFC0C0035BC75 /* UIView+TKCategory.m */,
+				447312ED168CFB9F0035BC75 /* TKAlertCenter.h */,
+				447312EE168CFB9F0035BC75 /* TKAlertCenter.m */,
+			);
+			path = TKAlertCenter;
+			sourceTree = "<group>";
+		};
+		447312FD168CFE850035BC75 /* IMGs */ = {
+			isa = PBXGroup;
+			children = (
+				447312FE168CFE9C0035BC75 /* beer.png */,
+				447312FF168CFE9C0035BC75 /* beer@2x.png */,
+			);
+			name = IMGs;
+			sourceTree = "<group>";
+		};
 		44814EAE168CF03700E4E8C1 = {
 			isa = PBXGroup;
 			children = (
@@ -85,9 +155,13 @@
 			children = (
 				44814ECC168CF03700E4E8C1 /* TEDAppDelegate.h */,
 				44814ECD168CF03700E4E8C1 /* TEDAppDelegate.m */,
-				44814ED5168CF03700E4E8C1 /* TEDViewController.h */,
-				44814ED6168CF03700E4E8C1 /* TEDViewController.m */,
-				44814ED8168CF03700E4E8C1 /* TEDViewController.xib */,
+				44814ED5168CF03700E4E8C1 /* TEDMenuViewController.h */,
+				44814ED6168CF03700E4E8C1 /* TEDMenuViewController.m */,
+				447312D3168CF33A0035BC75 /* TEDArticlesViewController.h */,
+				447312D4168CF33A0035BC75 /* TEDArticlesViewController.m */,
+				447312FD168CFE850035BC75 /* IMGs */,
+				447312D9168CF63C0035BC75 /* NIBs */,
+				44814EE0168CF0BA00E4E8C1 /* Libraries */,
 				44814EC4168CF03700E4E8C1 /* Supporting Files */,
 			);
 			path = "CR Rezina News";
@@ -105,6 +179,32 @@
 				44814ED3168CF03700E4E8C1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44814EE0168CF0BA00E4E8C1 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				447312EB168CFB9F0035BC75 /* DejalActivityView */,
+				447312EC168CFB9F0035BC75 /* TKAlertCenter */,
+				44814EE5168CF12800E4E8C1 /* NAMainMenu */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		44814EE5168CF12800E4E8C1 /* NAMainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				44814EE6168CF12800E4E8C1 /* NAMenuItem.h */,
+				44814EE7168CF12800E4E8C1 /* NAMenuItem.m */,
+				44814EE8168CF12800E4E8C1 /* NAMenuItemView.h */,
+				44814EE9168CF12800E4E8C1 /* NAMenuItemView.m */,
+				44814EEB168CF12800E4E8C1 /* NAMenuView.h */,
+				44814EEC168CF12800E4E8C1 /* NAMenuView.m */,
+				44814EED168CF12800E4E8C1 /* NAMenuViewController.h */,
+				44814EEE168CF12800E4E8C1 /* NAMenuViewController.m */,
+				44814EEA168CF12800E4E8C1 /* NAMenuItemView.xib */,
+			);
+			path = NAMainMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +263,11 @@
 				44814ED0168CF03700E4E8C1 /* Default.png in Resources */,
 				44814ED2168CF03700E4E8C1 /* Default@2x.png in Resources */,
 				44814ED4168CF03700E4E8C1 /* Default-568h@2x.png in Resources */,
-				44814EDA168CF03700E4E8C1 /* TEDViewController.xib in Resources */,
+				44814EDA168CF03700E4E8C1 /* TEDMenuViewController.xib in Resources */,
+				44814EF1168CF12800E4E8C1 /* NAMenuItemView.xib in Resources */,
+				447312D7168CF33A0035BC75 /* TEDArticlesViewController.xib in Resources */,
+				44731300168CFE9C0035BC75 /* beer.png in Resources */,
+				44731301168CFE9C0035BC75 /* beer@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +280,15 @@
 			files = (
 				44814ECA168CF03700E4E8C1 /* main.m in Sources */,
 				44814ECE168CF03700E4E8C1 /* TEDAppDelegate.m in Sources */,
-				44814ED7168CF03700E4E8C1 /* TEDViewController.m in Sources */,
+				44814ED7168CF03700E4E8C1 /* TEDMenuViewController.m in Sources */,
+				44814EEF168CF12800E4E8C1 /* NAMenuItem.m in Sources */,
+				44814EF0168CF12800E4E8C1 /* NAMenuItemView.m in Sources */,
+				44814EF2168CF12800E4E8C1 /* NAMenuView.m in Sources */,
+				44814EF3168CF12800E4E8C1 /* NAMenuViewController.m in Sources */,
+				447312D6168CF33A0035BC75 /* TEDArticlesViewController.m in Sources */,
+				447312EF168CFB9F0035BC75 /* TKAlertCenter.m in Sources */,
+				447312F2168CFC0C0035BC75 /* UIView+TKCategory.m in Sources */,
+				44731304168D000E0035BC75 /* DejalActivityView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,12 +303,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		44814ED8168CF03700E4E8C1 /* TEDViewController.xib */ = {
+		44814ED8168CF03700E4E8C1 /* TEDMenuViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				44814ED9168CF03700E4E8C1 /* en */,
 			);
-			name = TEDViewController.xib;
+			name = TEDMenuViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -258,6 +370,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CR Rezina News/CR Rezina News-Prefix.pch";
 				INFOPLIST_FILE = "CR Rezina News/CR Rezina News-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -269,6 +382,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CR Rezina News/CR Rezina News-Prefix.pch";
 				INFOPLIST_FILE = "CR Rezina News/CR Rezina News-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -293,6 +407,7 @@
 				44814EDF168CF03700E4E8C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
