@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NAMenuViewController.h"
+#import "TEDArticlesViewController.h"
 
 @interface TEDMenuViewController : NAMenuViewController
 

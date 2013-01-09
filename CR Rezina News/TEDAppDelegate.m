@@ -14,7 +14,10 @@
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
-
+@synthesize splashView;
+- (void)startupAnimationDone:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+    [splashView removeFromSuperview];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -25,6 +28,21 @@
 	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     [self.window makeKeyAndVisible];
 
+    // splash animation
+    splashView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 320, 480)];
+    splashView.image = [UIImage imageNamed:@"default.png"];
+    [self.window addSubview:splashView];
+    [self.window bringSubviewToFront:splashView];
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1.0];
+    [UIView setAnimationTransition:UIViewAnimationTransitionNone forView:self.window cache:YES];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(startupAnimationDone:finished:context:)];
+    splashView.alpha = 0.0;
+    splashView.frame = CGRectMake(-60, -85, 440, 635);
+    [UIView commitAnimations];
+
+    
     return YES;
 }
 

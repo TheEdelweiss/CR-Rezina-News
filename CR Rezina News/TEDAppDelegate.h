@@ -15,5 +15,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) TEDMenuViewController *viewController;
-
+@property (strong, nonatomic) UIImageView *splashView;
+- (void)startupAnimationDone:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context;
 @end

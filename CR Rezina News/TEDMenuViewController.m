@@ -7,7 +7,7 @@
 //
 
 #import "TEDMenuViewController.h"
-#import "TEDArticlesViewController.h"
+
 
 @interface TEDMenuViewController ()
 - (NSArray *)createMenuItems;
@@ -33,65 +33,42 @@
 	NSMutableArray *items = [[NSMutableArray alloc] init];
 	
 	// First Item
-	NAMenuItem *item1 = [[NAMenuItem alloc] initWithTitle:@"First Item"
+	NAMenuItem *item1 = [[NAMenuItem alloc] initWithTitle:@"NEWS"
 													 image:[UIImage imageNamed:@"icon.png"]
 												   vcClass:[TEDArticlesViewController class]];
     
     NAMenuItem *item2 = [[NAMenuItem alloc] initWithTitle:@"First Item"
                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[TEDArticlesViewController class]];
+                                                  vcClass:[self class]];
     
     NAMenuItem *item3 = [[NAMenuItem alloc] initWithTitle:@"First Item"
                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[TEDArticlesViewController class]];
+                                                  vcClass:[self class]];
     
     NAMenuItem *item4 = [[NAMenuItem alloc] initWithTitle:@"First Item"
                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[TEDArticlesViewController class]];
+                                                  vcClass:[self class]];
     
     NAMenuItem *item5 = [[NAMenuItem alloc] initWithTitle:@"First Item"
                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[TEDArticlesViewController class]];
+                                                  vcClass:[self class]];
     
     NAMenuItem *item6 = [[NAMenuItem alloc] initWithTitle:@"First Item"
                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[TEDArticlesViewController class]];
+                                                  vcClass:[self class]];
     
     NAMenuItem *item7 = [[NAMenuItem alloc] initWithTitle:@"First Item"
                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[TEDArticlesViewController class]];
+                                                  vcClass:[self class]];
     
     NAMenuItem *item8 = [[NAMenuItem alloc] initWithTitle:@"First Item"
                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[TEDArticlesViewController class]];
+                                                  vcClass:[self class]];
     
-	NAMenuItem *item9 = [[NAMenuItem alloc] initWithTitle:@"First Item"
+    NAMenuItem *item9 = [[NAMenuItem alloc] initWithTitle:@"First Item"
                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[TEDArticlesViewController class]];
-    
-    NAMenuItem *item10 = [[NAMenuItem alloc] initWithTitle:@"First Item"
-                                                    image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[TEDArticlesViewController class]];
-    
-    NAMenuItem *item11 = [[NAMenuItem alloc] initWithTitle:@"First Item"
-                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                   vcClass:[TEDArticlesViewController class]];
-    
-    NAMenuItem *item12 = [[NAMenuItem alloc] initWithTitle:@"First Item"
-                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                   vcClass:[TEDArticlesViewController class]];
-    
-    NAMenuItem *item13 = [[NAMenuItem alloc] initWithTitle:@"First Item"
-                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                   vcClass:[TEDArticlesViewController class]];
-    
-    NAMenuItem *item14 = [[NAMenuItem alloc] initWithTitle:@"First Item"
-                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                   vcClass:[TEDArticlesViewController class]];
-    
-    NAMenuItem *item15 = [[NAMenuItem alloc] initWithTitle:@"First Item"
-                                                     image:[UIImage imageNamed:@"icon.png"]
-                                                   vcClass:[TEDArticlesViewController class]];
+                                                  vcClass:[self class]];
+
     
     [items addObject:item1];
     [items addObject:item2];
@@ -101,17 +78,8 @@
     [items addObject:item6];
     [items addObject:item7];
     [items addObject:item8];
-    [items addObject:item9];
-    [items addObject:item10];
+	[items addObject:item9];
     
-    [items addObject:item11];
-    [items addObject:item12];
-    [items addObject:item13];
-    [items addObject:item14];
-    [items addObject:item15];
-    
-   
-		
 	return items;
 }
 
@@ -132,8 +100,7 @@
 
 - (void) viewWillAppear:(BOOL)animated{
 
-    [self.navigationController.navigationBar setHidden:YES];
-
+  
 }
 
 
