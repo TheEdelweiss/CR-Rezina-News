@@ -10,7 +10,7 @@
 #import "TEDArticlesViewControllerDataSource.h"
 #import "TEDArticlesViewControllerDelegate.h"
 
-@class MGBox;
+@class MGBox,MGScrollView;
 
 @interface TEDArticlesScrollerViewController : UIView <UIScrollViewDelegate>
 {
@@ -26,7 +26,7 @@
 
 // number of elements
 @property  NSInteger numberOfItemsInScroller;
-
+@property (nonatomic, strong) MGScrollView *scroller;
 
 - (MGBox *)parentBoxOf: (UIView *)view;
 - (void)start;

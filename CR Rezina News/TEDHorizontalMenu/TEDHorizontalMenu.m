@@ -18,36 +18,43 @@
 @synthesize itemCount;
 @synthesize receivedData;
 @synthesize collectionConnection;
+@synthesize itemsTitles;
+@synthesize wasBuild;
 
 -(id) init
 {
     if (self = [super init]) {
         
     }
-    
     return self;
 }
 
--(void) startWithURL:(NSURL *)URL andPOSTParams: (NSString *)params
+-(void) startWithURL:(NSURL *) URL
 {
     NSMutableURLRequest* request =
     [NSMutableURLRequest requestWithURL: URL
                             cachePolicy: NSURLRequestUseProtocolCachePolicy
                         timeoutInterval: 15.0];
     
-    request.HTTPMethod = @"POST";
-    request.HTTPBody = [params dataUsingEncoding: NSUTF8StringEncoding];
-    
+    request.HTTPMethod = @"GET";
     
     self.collectionConnection = [[NSURLConnection alloc] initWithRequest: request
                                                                 delegate: self];
     if (self.collectionConnection)
         self.receivedData = [NSMutableData data];
+    
+    if([self tryToBuildWithContentOfLocalFile])
+    {
+        [self buildSelf];
+        self.wasBuild = YES;
+    }
+    
 }
 
 -(void) applyBaseSettings{
 
-     [self setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.25]];
+     //[self setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.25]];
+     
      self.bounces = NO;
      self.scrollEnabled = YES;
      self.alwaysBounceHorizontal = YES;
@@ -56,34 +63,51 @@
      self.showsVerticalScrollIndicator = NO;
      }
 
+- (BOOL) tryToBuildWithContentOfLocalFile
+{
+    //categoriesMenuList.plist
+    NSString* menuFilePath = [[NSBundle mainBundle] pathForResource: @"categoriesMenuList"
+                                                             ofType: @"plist"];
+    
+    NSArray *dict = [[NSArray alloc] initWithContentsOfFile: menuFilePath];
+                             
+    if([dict count] > 0)
+    {
+        self.itemsTitles = [[NSMutableArray alloc] init];
+        self.categoryIDs = [[NSMutableArray alloc] init];
+        
+        [self.itemsTitles addObject: @"Toate"];
+        [self.categoryIDs addObject: @"all"];
+
+        
+        for (NSDictionary* attributes in dict)
+        {
+            [self.itemsTitles addObject: [attributes objectForKey: @"cat_name"]];
+            [self.categoryIDs addObject: [attributes objectForKey: @"cat_id"]];
+        }
+     }
+    else return NO;
+
+    return YES;
+}
 
 -(void) buildSelf
 {
-    
     [self applyBaseSettings];
-    [self.categoryIDs removeAllObjects];
-    self.itemCount = [self.items count];
+    //[self.categoryIDs removeAllObjects];
+    self.itemCount = [self.itemsTitles count];
     
-    UIFont *buttonFont = [UIFont boldSystemFontOfSize:13];
+    UIFont *buttonFont = [UIFont fontWithName: @"OpenSans-Bold"
+                                         size: 13];
     int buttonPadding = 25;
     
     int tag = baseButtonTag;
     int xPos = 0;
     
-    NSMutableArray *itemsTitles = [[NSMutableArray alloc] init];
-    self.categoryIDs = [[NSMutableArray alloc] init];
-    
-    for (NSDictionary* attributes in self.items) {
-        
-        [itemsTitles addObject: [attributes objectForKey: @"cat_name"]];
-        [self.categoryIDs addObject: [attributes objectForKey: @"cat_id"]];
-    }
-    
-    
     for(int i = 0 ; i < self.itemCount; i ++)
     {
         UIButton *customButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [customButton setTitle: [itemsTitles objectAtIndex: i]
+        [customButton setTitle: [self.itemsTitles objectAtIndex: i]
                       forState: UIControlStateNormal];
         customButton.titleLabel.font = buttonFont;
         
@@ -93,22 +117,19 @@
                          action: @selector(buttonIsTapped:)
                forControlEvents: UIControlEventTouchUpInside];
         
-        NSString *title = [itemsTitles objectAtIndex: i];
+        NSString *title = [self.itemsTitles objectAtIndex: i];
         
         int buttonWidth = [title sizeWithFont: customButton.titleLabel.font
-                            constrainedToSize: CGSizeMake(150, 36)
+                            constrainedToSize: CGSizeMake(150, 19)
                                 lineBreakMode: UILineBreakModeClip].width;
         
-        customButton.frame = CGRectMake(xPos, 0, buttonWidth + buttonPadding, 36);
+        customButton.frame = CGRectMake(xPos, 0, buttonWidth + buttonPadding, 19);
         xPos += buttonWidth;
         xPos += buttonPadding;
         
-        
-        [customButton setBackgroundColor:[UIColor colorWithRed: 0.25
-                                                         green: 0.32
-                                                          blue: 0.39
-                                                         alpha: 1]];
-        
+        UIImage *resizableButton = [[UIImage imageNamed:@"categoryButoonBG.png" ] resizableImageWithCapInsets: UIEdgeInsetsMake(10, 5, 10, 5)];
+        [customButton setBackgroundImage:resizableButton
+                                forState:UIControlStateSelected];
         //customButton.titleEdgeInsets = UIEdgeInsetsMake(20, 0, 0, 0);
    
         
@@ -118,12 +139,15 @@
 
     self.contentSize = CGSizeMake(xPos, 36);
     [self layoutSubviews];
+    
+    [self.itemSelectedDelegate menuIsInitSuccessful: self];
+    
 }
 
 
 -(void) setSelectedElementAtIndex:(int) index animated:(BOOL) animated
 {
-    UIButton *thisButton = (UIButton*) [self viewWithTag:index + baseButtonTag];
+    UIButton *thisButton = (UIButton*) [self viewWithTag: index + baseButtonTag];
     thisButton.selected = YES;
     [self setContentOffset:CGPointMake(thisButton.frame.origin.x, 0) animated:animated];
     //[self.itemSelectedDelegate horizontalMenu:self itemSelectedAtIndex: index];
@@ -145,7 +169,6 @@
             thisButton.selected = NO;
     }
     NSUInteger index = button.tag - baseButtonTag;
-    
     [self.itemSelectedDelegate menuItemSelectedAtIndex: [self.categoryIDs objectAtIndex: index]];
 }
 
@@ -159,7 +182,6 @@ didReceiveResponse: (NSURLResponse *) response
     NSInteger connectionStatus = [(NSHTTPURLResponse*)response statusCode];
     
     if(connectionStatus == 200) {
-        //NSLog(@"Server respond OK!");
     } else {
         if (connection == collectionConnection)
         {
@@ -192,7 +214,6 @@ didReceiveResponse: (NSURLResponse *) response
 - (void)connection: (NSURLConnection *)connection
   didFailWithError: (NSError *)error
 {
-    
     [self cancelConnection: connection];
 }
 
@@ -216,16 +237,79 @@ didReceiveResponse: (NSURLResponse *) response
     NSString* resultString = [[NSString alloc] initWithData: self.receivedData
                                                    encoding: NSUTF8StringEncoding];
     @try {
-         self.items = [resultString objectFromJSONString];
-    }
-    @catch (NSException * e) {
+           self.items = [resultString objectFromJSONString];
+         }
+         @catch (NSException * e)
+                 {
         
-    }
+                 }
     
     if(self.items) {
-        [self buildSelf];
+        if(self.wasBuild)
+        {
+            if([self.itemsTitles count] != [self.items count])
+            {
+                // rebuild menu
+                self.itemsTitles = [[NSMutableArray alloc] init];
+                self.categoryIDs = [[NSMutableArray alloc] init];
+                
+                [self.itemsTitles addObject: @"Toate"];
+                [self.categoryIDs addObject: @"all"];
+                
+                for (NSDictionary* attributes in self.items)
+                {
+                    [self.itemsTitles addObject: [attributes objectForKey: @"cat_name"]];
+                    
+                    [self.categoryIDs addObject: [attributes objectForKey: @"cat_id"]];
+                }
+                
+                [self removeSubviews];
+                [self buildSelf];
+                
+                NSString* menuFilePath = [[NSBundle mainBundle] pathForResource: @"categoriesMenuList"
+                                                                         ofType: @"plist"];
+                
+                [self.items writeToFile: menuFilePath
+                             atomically: YES];
+
+            }
+        }
+        else {
+            self.itemsTitles = [[NSMutableArray alloc] init];
+            self.categoryIDs = [[NSMutableArray alloc] init];
+            
+            [self.itemsTitles addObject: @"Toate"];
+            [self.categoryIDs addObject: @"all"];
+            
+            for (NSDictionary* attributes in self.items)
+            {
+                [self.itemsTitles addObject: [attributes objectForKey: @"cat_name"]];
+                [self.categoryIDs addObject: [attributes objectForKey: @"cat_id"]];
+            }
+            [self buildSelf];
+            
+            NSString* menuFilePath = [[NSBundle mainBundle] pathForResource: @"categoriesMenuList"
+                                                                     ofType: @"plist"];
+            
+            [self.items writeToFile: menuFilePath
+                         atomically: YES];
+        }
+
     }
     
+}
+
+
+- (void) removeSubviews
+{
+    // remove all subview's from self
+    for (UIView *view in self.subviews)
+    {
+        if (![view isKindOfClass:[UIImageView class]])
+        {
+            [view removeFromSuperview];
+        }
+    }
 }
 
 // -----------------------------------------------------------------------------

@@ -18,15 +18,14 @@
 
 @implementation TEDArticlesScrollerViewController
 {
-    MGScrollView *scroller;
+   // MGScrollView *scroller;
 }
 
-// protocols
 @synthesize scrollerDataSource;
 @synthesize scrollerDelegate;
 
 // ---------------------------------
-@synthesize numberOfItemsInScroller;
+@synthesize numberOfItemsInScroller,scroller;
 
 - (void)start
 {
@@ -41,7 +40,8 @@
     [self addSubview:scroller];
     scroller.alwaysBounceVertical = YES;
     scroller.delegate = self;
-    //self.backgroundColor = [UIColor colorWithRed:0.29 green:0.32 blue:0.35 alpha:1];
+    
+    // self.backgroundColor = [UIColor colorWithRed:0.29 green:0.32 blue:0.35 alpha:1];
 //  -------------------------
     
 if([self reloadData]) {
@@ -50,6 +50,12 @@ if([self reloadData]) {
    // [scroller flashScrollIndicators];
     
     }
+}
+
+
+- (void) viewDidLoad
+{
+    //self.backgroundColor = [UIColor redColor];
 }
 
 // -----------------------------------------------------------------------------
@@ -63,24 +69,65 @@ if([self reloadData]) {
            
            for (int i = 0; i < self.numberOfItemsInScroller; i++) {
                 MGBox *Box = [scrollerDataSource boxAtIndex: i];
-              
-               UIButton *button = [self button: @"Citeste articolul complet"
-                                           for: @selector(indexOfParentBox:)];
+            
+               if ([Box.topLines count] == 0 & [Box.bottomLines count] == 0 & [Box.middleLines count] ==0)
+               {
+                  
+                   MGBox *errorBox = [MGStyledBox box];
+                   UIFont *headerFont = [UIFont fontWithName: @"OpenSans-Bold"
+                                                        size: 15];
+                   UIFont *shortContentFont = [UIFont fontWithName: @"OpenSans-SemiboldItalic"
+                                                              size: 13];
+                   // header / title
+                   NSString *title = @"Ne pare rău :(";
+                   
+                   MGBoxLine *titleLine = [MGBoxLine multilineWithText: title
+                                                                  font: headerFont
+                                                               padding: 14];
+                   
+                   titleLine.linePadding = 6;
+                   titleLine.itemPadding = 0;
+                   [errorBox.middleLines addObject: titleLine];
+                   
+                   // short cotent of article
+                   NSString *shortContent = @"Nu au fost gasite coincidențe în baza de date, mai încercați odată ...";
+                   
+                   MGBoxLine *shortContentLine = [MGBoxLine multilineWithText: shortContent
+                                                                         font: shortContentFont
+                                                                      padding: 14];
+                   shortContentLine.linePadding = 6;
+                   shortContentLine.itemPadding = 0;
+                   [errorBox.middleLines addObject: shortContentLine];
+                   [scroller.boxes insertObject: errorBox
+                                        atIndex: i];
+
+               }
+               else {
                
+                UIButton *button = [self buttonWithTitle: @"CITEȘTE ARTICOLUL COMPLET"
+                                               forAction: @selector(indexOfParentBox:)];
+              
+               [button setBackgroundImage:[[UIImage imageNamed:@"button.png" ] resizableImageWithCapInsets: UIEdgeInsetsMake(10, 5, 10, 5)]
+                                 forState:UIControlStateNormal];
+                   
+               button.titleLabel.font =[UIFont fontWithName:@"OpenSans-Bold" size:13 ];
                MGBoxLine *line = [MGBoxLine lineWithLeft: button right: nil];
                line.linePadding = 4;
                line.height = 42;
                line.itemPadding = 0;
-               
-               
+                              
                [Box.bottomLines addObject: line];
                
                [scroller.boxes insertObject: Box
                                     atIndex: i];
+               }
            }
            
+           
            [scroller drawBoxesWithSpeed: 0.6];
-           //[scroller flashScrollIndicators];
+           [self.scroller setContentOffset:CGPointMake(0,0) animated:YES];
+           [scroller flashScrollIndicators];
+           
            return YES;
        }
     return NO;
@@ -103,7 +150,8 @@ if([self reloadData]) {
       }
     
     else{
-        [scrollerDelegate itemSelectedAtIndex: i];  //send index to delegate
+        [scrollerDelegate articlesViewController: self
+                            didSelectItemAtIndex: i];  //send index to delegate
          return i;
     }
 }
@@ -130,10 +178,10 @@ if([self reloadData]) {
 
 // -----------------------------------------------------------------------------
 
-- (UIButton *)button:(NSString *)title for:(SEL)selector
+- (UIButton *) buttonWithTitle:(NSString *)title forAction:(SEL)selector
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
+    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14];
     
     [button setTitleColor: [UIColor colorWithWhite: 0.9
                                              alpha: 0.9]

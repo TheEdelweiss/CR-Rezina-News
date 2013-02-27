@@ -9,8 +9,22 @@
 #import <UIKit/UIKit.h>
 #import "TEDArticlesViewControllerDataSource.h"
 #import "TEDArticlesViewControllerDelegate.h"
+#import "TEDArticlesScrollerViewController.h"
 #import "TEDHorizontalMenuDelegate.h"
 #import "MBProgressHUD.h"
+#import "TEDArticleModelObject.h"
+#import "TEDHorizontalMenu.h"
+#import "TEDLazyImageView.h"
+#import "MGScrollView.h"
+#import "MGStyledBox.h"
+#import "MGBoxLine.h"
+#import "JSONKit.h"
+#import "NSString+TEDHTMLEntities.h"
+#import "TEDWebViewController.h"
+#import "NSURL+TEDWebAPIURL.h"
+#import "ToolDrawerView.h"
+#import "UISearchBar+TEDSearchBar.h"
+#import "TEDPaginatorModel.h"
 
 @class TEDArticlesScrollerViewController, TEDHorizontalMenu;
 
@@ -18,19 +32,20 @@
                                                          TEDArticlesViewControllerDataSource,
                                                          TEDArticlesViewControllerDelegate,
                                                          MBProgressHUDDelegate,
-                                                         TEDHorizontalMenuDelegate>
+                                                         TEDHorizontalMenuDelegate,
+                                                         UISearchBarDelegate>
 {
     
     TEDArticlesScrollerViewController *articlesScrollerView;
     TEDHorizontalMenu *catMenu;
+    ToolDrawerView *toolDrawerView;
+    UISearchBar *searchField;
     
     //HUD class instance
     MBProgressHUD *HUD;
-    long long expectedLength;
-	long long currentLength;
+
     
-    // API URL
-    NSString *baseAPIURL;
+    NSMutableString *currentCategory;
     
     // NSURL
     NSMutableData *receivedData;
@@ -39,17 +54,26 @@
 
 }
 
+@property (nonatomic, strong) MBProgressHUD *HUD;
+
+
 @property (nonatomic, strong) TEDArticlesScrollerViewController * articlesScrollerView;
 @property (nonatomic, strong) TEDHorizontalMenu *catMenu;
+@property (nonatomic, strong) ToolDrawerView *toolDrawerView;
+@property (nonatomic, strong) UISearchBar *searchField;
 
-@property (nonatomic, strong) NSString *baseAPIURL;
+@property (nonatomic, strong) NSMutableString *currentCategory;
+@property NSUInteger currentPageNumber;
+@property (nonatomic, strong) TEDPaginatorModel *paginator;
 
 @property (nonatomic, strong) NSMutableArray *collection;
 @property (nonatomic, strong) NSMutableData *receivedData;
 @property (nonatomic, strong) NSURLConnection *collectionConnection;
 
+
 // flags
 @property BOOL scrollerIsInit;
 @property BOOL menuIsInit;
+@property BOOL searchResultsIsShow;
 
 @end

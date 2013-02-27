@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class TEDArticlesScrollerViewController;
 @protocol TEDArticlesViewControllerDelegate <NSObject>
 @required
-- (void) itemSelectedAtIndex: (NSInteger)index;
+
+- (void)articlesViewController: (id)articlesViewController
+          didSelectItemAtIndex: (NSInteger)index;
 
 @end

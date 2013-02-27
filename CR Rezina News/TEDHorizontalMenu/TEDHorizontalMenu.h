@@ -21,16 +21,17 @@
 
  @property (nonatomic, strong) NSMutableData *receivedData;
  @property (nonatomic, strong) NSURLConnection *collectionConnection;
- @property (nonatomic, strong) NSDictionary *items;
+ @property (nonatomic, strong) NSMutableDictionary *items;
  @property (nonatomic, strong) NSMutableArray *categoryIDs;
+ @property (nonatomic, strong) NSMutableArray *itemsTitles;
  @property (nonatomic, unsafe_unretained) id <TEDHorizontalMenuDelegate> itemSelectedDelegate;
  @property int itemCount;
+ @property BOOL wasBuild;
 
 -(void) setSelectedElementAtIndex: (int) index
                          animated: (BOOL) animated;
 
--(void) startWithURL:(NSURL *) URL
-      andPOSTParams: (NSString *) params;
+-(void) startWithURL:(NSURL *) URL;
 
 @end
 

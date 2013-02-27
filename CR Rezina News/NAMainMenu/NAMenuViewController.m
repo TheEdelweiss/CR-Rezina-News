@@ -19,10 +19,6 @@
 	self.view = menuView;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-
 
 #pragma mark - NAMenuViewDelegate Methods
 

@@ -103,7 +103,12 @@
 								
 		itemView.frame = CGRectMake(0, 0, self.itemSize.width, self.itemSize.height);
 		itemView.label.text = menuItem.title;
-		itemView.imageView.image = menuItem.icon;
+        
+        itemView.label.font = [UIFont fontWithName: @"OpenSans-Semibold"
+                                              size: 14 ];
+		itemView.label.text = [itemView.label.text uppercaseString];
+        
+        itemView.imageView.image = menuItem.icon;
 		itemView.tag = i;
 		[itemView addTarget:self action:@selector(itemPressed:) forControlEvents:UIControlEventTouchUpInside];
 		

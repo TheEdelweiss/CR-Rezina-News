@@ -7,22 +7,49 @@
 //
 
 #import "TEDAppDelegate.h"
-
 #import "TEDMenuViewController.h"
+
+@interface TEDAppDelegate (Private)
+
+- (void)startupAnimationDone: (NSString *) animationID
+                    finished: (NSNumber *) finished
+                     context: (void *) context;
+
+- (UIWindow *) customizeWindow: (UIWindow *) window
+                   withTexture: (NSString *) filename;
+
+@end
+
 
 @implementation TEDAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 @synthesize splashView;
+
 - (void)startupAnimationDone:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
     [splashView removeFromSuperview];
 }
+
+- (UIWindow *) customizeWindow: (UIWindow *) window
+                   withTexture: (NSString *) filename
+{
+    [window setBackgroundColor: [UIColor colorWithPatternImage: [UIImage imageNamed: filename]]];
+    return window;
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
      [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
-       
+    
+    self.window = [self customizeWindow: self.window
+                            withTexture: @"bg.png"];
+    
+    [self.window.layer setCornerRadius: 5.0f];
+    [self.window.layer setMasksToBounds:YES];
+ 
     // Override point for customization after application launch.
     self.viewController = [[TEDMenuViewController alloc] init];
 	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
@@ -30,7 +57,7 @@
 
     // splash animation
     splashView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 320, 480)];
-    splashView.image = [UIImage imageNamed:@"default.png"];
+    splashView.image = [UIImage imageNamed:@"bg.png"];
     [self.window addSubview:splashView];
     [self.window bringSubviewToFront:splashView];
     [UIView beginAnimations:nil context:nil];
@@ -42,6 +69,7 @@
     splashView.frame = CGRectMake(-60, -85, 440, 635);
     [UIView commitAnimations];
 
+   
     
     return YES;
 }

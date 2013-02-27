@@ -7,7 +7,7 @@
 //
 
 #import "TEDMenuViewController.h"
-
+#import "UINavigationBar+TEDShadow.h"
 
 @interface TEDMenuViewController ()
 - (NSArray *)createMenuItems;
@@ -31,44 +31,43 @@
 
 - (NSArray *)createMenuItems {
 	NSMutableArray *items = [[NSMutableArray alloc] init];
-	
+
 	// First Item
 	NAMenuItem *item1 = [[NAMenuItem alloc] initWithTitle:@"NEWS"
 													 image:[UIImage imageNamed:@"icon.png"]
 												   vcClass:[TEDArticlesViewController class]];
     
-    NAMenuItem *item2 = [[NAMenuItem alloc] initWithTitle:@"First Item"
+    NAMenuItem *item2 = [[NAMenuItem alloc] initWithTitle:@"Hartă"
+                                                    image:[UIImage imageNamed:@"icon.png"]
+                                                  vcClass:[TEDDistrictMapViewController class]];
+    
+    NAMenuItem *item3 = [[NAMenuItem alloc] initWithTitle:@"Contacte"
+                                                    image:[UIImage imageNamed:@"icon.png"]
+                                                  vcClass:[TEDContactsViewController class]];
+    
+    NAMenuItem *item4 = [[NAMenuItem alloc] initWithTitle:@"Primării"
                                                     image:[UIImage imageNamed:@"icon.png"]
                                                   vcClass:[self class]];
     
-    NAMenuItem *item3 = [[NAMenuItem alloc] initWithTitle:@"First Item"
+    NAMenuItem *item5 = [[NAMenuItem alloc] initWithTitle:@"Felicitări"
                                                     image:[UIImage imageNamed:@"icon.png"]
                                                   vcClass:[self class]];
     
-    NAMenuItem *item4 = [[NAMenuItem alloc] initWithTitle:@"First Item"
+    NAMenuItem *item6 = [[NAMenuItem alloc] initWithTitle:@"Rezina"
+                                                    image:[UIImage imageNamed:@"icon.png"]
+                                                  vcClass:[TEDAboutDistrictViewController class]];
+    
+    NAMenuItem *item7 = [[NAMenuItem alloc] initWithTitle:@"Organigramă"
                                                     image:[UIImage imageNamed:@"icon.png"]
                                                   vcClass:[self class]];
     
-    NAMenuItem *item5 = [[NAMenuItem alloc] initWithTitle:@"First Item"
+    NAMenuItem *item8 = [[NAMenuItem alloc] initWithTitle:@"Conducere"
                                                     image:[UIImage imageNamed:@"icon.png"]
                                                   vcClass:[self class]];
     
-    NAMenuItem *item6 = [[NAMenuItem alloc] initWithTitle:@"First Item"
+    NAMenuItem *item9 = [[NAMenuItem alloc] initWithTitle:@"Consilieri"
                                                     image:[UIImage imageNamed:@"icon.png"]
                                                   vcClass:[self class]];
-    
-    NAMenuItem *item7 = [[NAMenuItem alloc] initWithTitle:@"First Item"
-                                                    image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[self class]];
-    
-    NAMenuItem *item8 = [[NAMenuItem alloc] initWithTitle:@"First Item"
-                                                    image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[self class]];
-    
-    NAMenuItem *item9 = [[NAMenuItem alloc] initWithTitle:@"First Item"
-                                                    image:[UIImage imageNamed:@"icon.png"]
-                                                  vcClass:[self class]];
-
     
     [items addObject:item1];
     [items addObject:item2];
@@ -86,35 +85,47 @@
 
 #pragma mark - View Lifecycle
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
- 	return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
+
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-
-	self.navigationItem.title = @"Main Menu";
-	self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.navigationController.navigationBar setBackgroundImage: [UIImage imageNamed: @"navBar.png"]
+                                                  forBarMetrics: UIBarMetricsDefault];
+    
+    
+	self.navigationItem.title = @"Meniu Principal";
+	self.view.backgroundColor = [UIColor clearColor];
+    
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage: [UIImage imageNamed:@"navigationClearButtonBG.png"]
+                                                      forState: UIControlStateNormal
+                                                    barMetrics: UIBarMetricsDefault];
+    
+    [[UIBarButtonItem appearance] setBackgroundImage: [UIImage imageNamed:@"navigationClearButtonBG.png"]
+                                            forState: UIControlStateNormal
+                                          barMetrics: UIBarMetricsDefault];
+    
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.hidesBackButton = YES;
+    
+    [self.navigationController.navigationBar dropShadowWithOffset: CGSizeMake(0, 3)
+                                                           radius: 2
+                                                            color: [UIColor darkGrayColor]
+                                                          opacity: 0.5];
+    
 }
 
-- (void) viewWillAppear:(BOOL)animated{
 
+- (void) viewWillAppear:(BOOL)animated{
   
 }
 
-
-
-/*- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}*/
+}
 
 @end

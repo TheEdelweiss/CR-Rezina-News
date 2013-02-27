@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441AFC2516A087A500E005B8 /* TEDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441AFC2416A087A500E005B8 /* TEDWebViewController.m */; };
+		442D427F16C53FC4002B7810 /* UINavigationBar+TEDShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D427E16C53FC4002B7810 /* UINavigationBar+TEDShadow.m */; };
+		442D428B16C56909002B7810 /* category_scroller_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 442D428816C56908002B7810 /* category_scroller_bg.png */; };
+		442D428C16C56909002B7810 /* categoryButoonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 442D428916C56908002B7810 /* categoryButoonBG.png */; };
+		442D428D16C56909002B7810 /* searchBarBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 442D428A16C56908002B7810 /* searchBarBG.png */; };
+		442D428F16C56C09002B7810 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 442D428E16C56C09002B7810 /* play.png */; };
+		442D429116C57286002B7810 /* searchLabelBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 442D429016C57286002B7810 /* searchLabelBG.png */; };
+		442D429316C58659002B7810 /* categoriesMenuList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 442D429216C58659002B7810 /* categoriesMenuList.plist */; };
+		4464FCA116A5EA7200544F1D /* TEDDistrictMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4464FCA016A5EA7100544F1D /* TEDDistrictMapViewController.m */; };
+		447D2C7016CAF117005C5851 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 447D2C6F16CAF117005C5851 /* button.png */; };
+		447D2C7216CAF865005C5851 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 447D2C7116CAF865005C5851 /* list.png */; };
+		4480E71016D3DEAA0042CF96 /* TEDContactsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4480E70F16D3DEAA0042CF96 /* TEDContactsModel.m */; };
 		44814EBE168CF03700E4E8C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44814EBD168CF03700E4E8C1 /* UIKit.framework */; };
 		44814EC0168CF03700E4E8C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44814EBF168CF03700E4E8C1 /* Foundation.framework */; };
 		44814EC2168CF03700E4E8C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44814EC1168CF03700E4E8C1 /* CoreGraphics.framework */; };
@@ -23,6 +35,33 @@
 		44814EF1168CF12800E4E8C1 /* NAMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44814EEA168CF12800E4E8C1 /* NAMenuItemView.xib */; };
 		44814EF2168CF12800E4E8C1 /* NAMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44814EEC168CF12800E4E8C1 /* NAMenuView.m */; };
 		44814EF3168CF12800E4E8C1 /* NAMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44814EEE168CF12800E4E8C1 /* NAMenuViewController.m */; };
+		44971EAE16A0516700C9F7CC /* NSString+TEDHTMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 44971EAD16A0516700C9F7CC /* NSString+TEDHTMLEntities.m */; };
+		4497249216BAB5E7002FDA34 /* NSURL+TEDWebAPIURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4497249116BAB5E7002FDA34 /* NSURL+TEDWebAPIURL.m */; };
+		449724AC16BB0B15002FDA34 /* navigationClearButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 449724AA16BB0B15002FDA34 /* navigationClearButtonBG.png */; };
+		449AC50416A6A762002BA6BD /* callout_anchor.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4E816A6A762002BA6BD /* callout_anchor.png */; };
+		449AC50516A6A762002BA6BD /* callout_anchor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4E916A6A762002BA6BD /* callout_anchor@2x.png */; };
+		449AC50616A6A762002BA6BD /* callout_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4EA16A6A762002BA6BD /* callout_bg.png */; };
+		449AC50716A6A762002BA6BD /* callout_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4EB16A6A762002BA6BD /* callout_bg@2x.png */; };
+		449AC50816A6A762002BA6BD /* callout_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4EC16A6A762002BA6BD /* callout_left.png */; };
+		449AC50916A6A762002BA6BD /* callout_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4ED16A6A762002BA6BD /* callout_left@2x.png */; };
+		449AC50A16A6A762002BA6BD /* callout_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4EE16A6A762002BA6BD /* callout_right.png */; };
+		449AC50B16A6A762002BA6BD /* callout_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4EF16A6A762002BA6BD /* callout_right@2x.png */; };
+		449AC50C16A6A762002BA6BD /* NAAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 449AC4F116A6A762002BA6BD /* NAAnnotation.m */; };
+		449AC50D16A6A762002BA6BD /* NACallOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 449AC4F316A6A762002BA6BD /* NACallOutView.m */; };
+		449AC50E16A6A762002BA6BD /* NAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 449AC4F516A6A762002BA6BD /* NAMapView.m */; };
+		449AC50F16A6A762002BA6BD /* NAPinAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 449AC4F716A6A762002BA6BD /* NAPinAnnotationView.m */; };
+		449AC51016A6A762002BA6BD /* pinGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4F816A6A762002BA6BD /* pinGreen.png */; };
+		449AC51116A6A762002BA6BD /* pinGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4F916A6A762002BA6BD /* pinGreen@2x.png */; };
+		449AC51216A6A762002BA6BD /* pinGreenFloating.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4FA16A6A762002BA6BD /* pinGreenFloating.png */; };
+		449AC51316A6A762002BA6BD /* pinGreenFloating@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4FB16A6A762002BA6BD /* pinGreenFloating@2x.png */; };
+		449AC51416A6A762002BA6BD /* pinPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4FC16A6A762002BA6BD /* pinPurple.png */; };
+		449AC51516A6A762002BA6BD /* pinPurple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4FD16A6A762002BA6BD /* pinPurple@2x.png */; };
+		449AC51616A6A762002BA6BD /* pinPurpleFloating.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4FE16A6A762002BA6BD /* pinPurpleFloating.png */; };
+		449AC51716A6A762002BA6BD /* pinPurpleFloating@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC4FF16A6A762002BA6BD /* pinPurpleFloating@2x.png */; };
+		449AC51816A6A762002BA6BD /* pinRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC50016A6A762002BA6BD /* pinRed.png */; };
+		449AC51916A6A762002BA6BD /* pinRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC50116A6A762002BA6BD /* pinRed@2x.png */; };
+		449AC51A16A6A762002BA6BD /* pinRedFloating.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC50216A6A762002BA6BD /* pinRedFloating.png */; };
+		449AC51B16A6A762002BA6BD /* pinRedFloating@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449AC50316A6A762002BA6BD /* pinRedFloating@2x.png */; };
 		449B388A16998C4300D6CDED /* TEDArticleModelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 449B388916998C4300D6CDED /* TEDArticleModelObject.m */; };
 		449B38D31699A15B00D6CDED /* MGBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 449B38C91699A15A00D6CDED /* MGBox.m */; };
 		449B38D41699A15B00D6CDED /* MGBoxLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 449B38CB1699A15A00D6CDED /* MGBoxLine.m */; };
@@ -33,6 +72,30 @@
 		449FFD92169B2468000A0DFE /* TEDLazyImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 449FFD91169B2468000A0DFE /* TEDLazyImageView.m */; };
 		449FFD95169B331D000A0DFE /* UIImage+TEDScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 449FFD94169B331D000A0DFE /* UIImage+TEDScale.m */; };
 		449FFD9E169B5BFC000A0DFE /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 449FFD9D169B5BFC000A0DFE /* MBProgressHUD.m */; };
+		44B01CEC16A739E4001C7337 /* TEDContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B01CEB16A739E4001C7337 /* TEDContactsViewController.m */; };
+		44B01CFA16A75EDD001C7337 /* TEDMGBoxScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B01CF916A75EDC001C7337 /* TEDMGBoxScrollerView.m */; };
+		44B01CFE16A763B6001C7337 /* TEDAboutDistrictViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B01CFD16A763B6001C7337 /* TEDAboutDistrictViewController.m */; };
+		44B01D0416A76642001C7337 /* aboutDistrict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44B01D0316A76642001C7337 /* aboutDistrict.plist */; };
+		44C6C3BF16C06BE600A8597D /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 44C6C3BE16C06BE600A8597D /* bg.png */; };
+		44CDF51A16A6BD4E00DB7395 /* district_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 44CDF51916A6BD4E00DB7395 /* district_map.png */; };
+		44CDF51E16A6CF7900DB7395 /* LocalitiesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44CDF51D16A6CF7900DB7395 /* LocalitiesList.plist */; };
+		44CF5EB416C184AD00B4730E /* navBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 44CF5EB316C184AD00B4730E /* navBar.png */; };
+		44CF5EBB16C1A8FD00B4730E /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 44CF5EBA16C1A8FD00B4730E /* home.png */; };
+		44CF5EBD16C1A90600B4730E /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 44CF5EBC16C1A90600B4730E /* refresh.png */; };
+		44DDB88516C84255000F6A87 /* Apache License Version 2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 44DDB87A16C84255000F6A87 /* Apache License Version 2.txt */; };
+		44DDB88616C84255000F6A87 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44DDB87B16C84255000F6A87 /* OpenSans-Bold.ttf */; };
+		44DDB88716C84255000F6A87 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44DDB87C16C84255000F6A87 /* OpenSans-BoldItalic.ttf */; };
+		44DDB88816C84255000F6A87 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44DDB87D16C84255000F6A87 /* OpenSans-ExtraBold.ttf */; };
+		44DDB88916C84255000F6A87 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44DDB87E16C84255000F6A87 /* OpenSans-ExtraBoldItalic.ttf */; };
+		44DDB88A16C84255000F6A87 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44DDB87F16C84255000F6A87 /* OpenSans-Italic.ttf */; };
+		44DDB88B16C84255000F6A87 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44DDB88016C84255000F6A87 /* OpenSans-Light.ttf */; };
+		44DDB88C16C84255000F6A87 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44DDB88116C84255000F6A87 /* OpenSans-LightItalic.ttf */; };
+		44DDB88D16C84255000F6A87 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44DDB88216C84255000F6A87 /* OpenSans-Regular.ttf */; };
+		44DDB88E16C84255000F6A87 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44DDB88316C84255000F6A87 /* OpenSans-Semibold.ttf */; };
+		44DDB88F16C84255000F6A87 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44DDB88416C84255000F6A87 /* OpenSans-SemiboldItalic.ttf */; };
+		44E061B616D82111000FB814 /* TEDPaginatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E061B516D82111000FB814 /* TEDPaginatorModel.m */; };
+		44EB978B16BF0CC5009FADA8 /* ToolDrawerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EB978A16BF0CC5009FADA8 /* ToolDrawerView.m */; };
+		44EB979316BF221E009FADA8 /* UISearchBar+TEDSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EB979216BF221E009FADA8 /* UISearchBar+TEDSearchBar.m */; };
 		44ED468C1698CA620019CBAC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ED46601698CA620019CBAC /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		44ED468D1698CA620019CBAC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 44ED46611698CA620019CBAC /* README.md */; };
 		44ED469E1698CA620019CBAC /* TEDHorizontalMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ED46881698CA620019CBAC /* TEDHorizontalMenu.m */; };
@@ -43,6 +106,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		441AFC2316A087A500E005B8 /* TEDWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEDWebViewController.h; sourceTree = "<group>"; };
+		441AFC2416A087A500E005B8 /* TEDWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEDWebViewController.m; sourceTree = "<group>"; };
+		442D427D16C53FC4002B7810 /* UINavigationBar+TEDShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TEDShadow.h"; sourceTree = "<group>"; };
+		442D427E16C53FC4002B7810 /* UINavigationBar+TEDShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TEDShadow.m"; sourceTree = "<group>"; };
+		442D428816C56908002B7810 /* category_scroller_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category_scroller_bg.png; sourceTree = "<group>"; };
+		442D428916C56908002B7810 /* categoryButoonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = categoryButoonBG.png; sourceTree = "<group>"; };
+		442D428A16C56908002B7810 /* searchBarBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchBarBG.png; sourceTree = "<group>"; };
+		442D428E16C56C09002B7810 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		442D429016C57286002B7810 /* searchLabelBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchLabelBG.png; sourceTree = "<group>"; };
+		442D429216C58659002B7810 /* categoriesMenuList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categoriesMenuList.plist; sourceTree = "<group>"; };
+		4464FC9F16A5EA7100544F1D /* TEDDistrictMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEDDistrictMapViewController.h; sourceTree = "<group>"; };
+		4464FCA016A5EA7100544F1D /* TEDDistrictMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEDDistrictMapViewController.m; sourceTree = "<group>"; };
+		447D2C6F16CAF117005C5851 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		447D2C7116CAF865005C5851 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		4480E70E16D3DEAA0042CF96 /* TEDContactsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEDContactsModel.h; sourceTree = "<group>"; };
+		4480E70F16D3DEAA0042CF96 /* TEDContactsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEDContactsModel.m; sourceTree = "<group>"; };
 		44814EB9168CF03700E4E8C1 /* CR Rezina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CR Rezina.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44814EBD168CF03700E4E8C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		44814EBF168CF03700E4E8C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +147,39 @@
 		44814EEC168CF12800E4E8C1 /* NAMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAMenuView.m; sourceTree = "<group>"; };
 		44814EED168CF12800E4E8C1 /* NAMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAMenuViewController.h; sourceTree = "<group>"; };
 		44814EEE168CF12800E4E8C1 /* NAMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAMenuViewController.m; sourceTree = "<group>"; };
+		44971EAC16A0516700C9F7CC /* NSString+TEDHTMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TEDHTMLEntities.h"; sourceTree = "<group>"; };
+		44971EAD16A0516700C9F7CC /* NSString+TEDHTMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TEDHTMLEntities.m"; sourceTree = "<group>"; };
+		4497249016BAB5E7002FDA34 /* NSURL+TEDWebAPIURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+TEDWebAPIURL.h"; sourceTree = "<group>"; };
+		4497249116BAB5E7002FDA34 /* NSURL+TEDWebAPIURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+TEDWebAPIURL.m"; sourceTree = "<group>"; };
+		449724AA16BB0B15002FDA34 /* navigationClearButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationClearButtonBG.png; sourceTree = "<group>"; };
+		449AC4E816A6A762002BA6BD /* callout_anchor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callout_anchor.png; sourceTree = "<group>"; };
+		449AC4E916A6A762002BA6BD /* callout_anchor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callout_anchor@2x.png"; sourceTree = "<group>"; };
+		449AC4EA16A6A762002BA6BD /* callout_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callout_bg.png; sourceTree = "<group>"; };
+		449AC4EB16A6A762002BA6BD /* callout_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callout_bg@2x.png"; sourceTree = "<group>"; };
+		449AC4EC16A6A762002BA6BD /* callout_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callout_left.png; sourceTree = "<group>"; };
+		449AC4ED16A6A762002BA6BD /* callout_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callout_left@2x.png"; sourceTree = "<group>"; };
+		449AC4EE16A6A762002BA6BD /* callout_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callout_right.png; sourceTree = "<group>"; };
+		449AC4EF16A6A762002BA6BD /* callout_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callout_right@2x.png"; sourceTree = "<group>"; };
+		449AC4F016A6A762002BA6BD /* NAAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAAnnotation.h; sourceTree = "<group>"; };
+		449AC4F116A6A762002BA6BD /* NAAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAAnnotation.m; sourceTree = "<group>"; };
+		449AC4F216A6A762002BA6BD /* NACallOutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NACallOutView.h; sourceTree = "<group>"; };
+		449AC4F316A6A762002BA6BD /* NACallOutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NACallOutView.m; sourceTree = "<group>"; };
+		449AC4F416A6A762002BA6BD /* NAMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAMapView.h; sourceTree = "<group>"; };
+		449AC4F516A6A762002BA6BD /* NAMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAMapView.m; sourceTree = "<group>"; };
+		449AC4F616A6A762002BA6BD /* NAPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAPinAnnotationView.h; sourceTree = "<group>"; };
+		449AC4F716A6A762002BA6BD /* NAPinAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAPinAnnotationView.m; sourceTree = "<group>"; };
+		449AC4F816A6A762002BA6BD /* pinGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinGreen.png; sourceTree = "<group>"; };
+		449AC4F916A6A762002BA6BD /* pinGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinGreen@2x.png"; sourceTree = "<group>"; };
+		449AC4FA16A6A762002BA6BD /* pinGreenFloating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinGreenFloating.png; sourceTree = "<group>"; };
+		449AC4FB16A6A762002BA6BD /* pinGreenFloating@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinGreenFloating@2x.png"; sourceTree = "<group>"; };
+		449AC4FC16A6A762002BA6BD /* pinPurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinPurple.png; sourceTree = "<group>"; };
+		449AC4FD16A6A762002BA6BD /* pinPurple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinPurple@2x.png"; sourceTree = "<group>"; };
+		449AC4FE16A6A762002BA6BD /* pinPurpleFloating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinPurpleFloating.png; sourceTree = "<group>"; };
+		449AC4FF16A6A762002BA6BD /* pinPurpleFloating@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinPurpleFloating@2x.png"; sourceTree = "<group>"; };
+		449AC50016A6A762002BA6BD /* pinRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinRed.png; sourceTree = "<group>"; };
+		449AC50116A6A762002BA6BD /* pinRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinRed@2x.png"; sourceTree = "<group>"; };
+		449AC50216A6A762002BA6BD /* pinRedFloating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinRedFloating.png; sourceTree = "<group>"; };
+		449AC50316A6A762002BA6BD /* pinRedFloating@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinRedFloating@2x.png"; sourceTree = "<group>"; };
 		449B388816998C4300D6CDED /* TEDArticleModelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEDArticleModelObject.h; sourceTree = "<group>"; };
 		449B388916998C4300D6CDED /* TEDArticleModelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEDArticleModelObject.m; sourceTree = "<group>"; };
 		449B38C81699A15A00D6CDED /* MGBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGBox.h; sourceTree = "<group>"; };
@@ -89,6 +201,36 @@
 		449FFD94169B331D000A0DFE /* UIImage+TEDScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TEDScale.m"; sourceTree = "<group>"; };
 		449FFD9C169B5BFC000A0DFE /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		449FFD9D169B5BFC000A0DFE /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		44B01CEA16A739E4001C7337 /* TEDContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEDContactsViewController.h; sourceTree = "<group>"; };
+		44B01CEB16A739E4001C7337 /* TEDContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEDContactsViewController.m; sourceTree = "<group>"; };
+		44B01CF816A75EDC001C7337 /* TEDMGBoxScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEDMGBoxScrollerView.h; sourceTree = "<group>"; };
+		44B01CF916A75EDC001C7337 /* TEDMGBoxScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEDMGBoxScrollerView.m; sourceTree = "<group>"; };
+		44B01CFC16A763B6001C7337 /* TEDAboutDistrictViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEDAboutDistrictViewController.h; sourceTree = "<group>"; };
+		44B01CFD16A763B6001C7337 /* TEDAboutDistrictViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEDAboutDistrictViewController.m; sourceTree = "<group>"; };
+		44B01D0316A76642001C7337 /* aboutDistrict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = aboutDistrict.plist; sourceTree = "<group>"; };
+		44C6C3BE16C06BE600A8597D /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		44CDF51916A6BD4E00DB7395 /* district_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = district_map.png; sourceTree = "<group>"; };
+		44CDF51D16A6CF7900DB7395 /* LocalitiesList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LocalitiesList.plist; sourceTree = "<group>"; };
+		44CF5EB316C184AD00B4730E /* navBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBar.png; sourceTree = "<group>"; };
+		44CF5EBA16C1A8FD00B4730E /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		44CF5EBC16C1A90600B4730E /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		44DDB87A16C84255000F6A87 /* Apache License Version 2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License Version 2.txt"; sourceTree = "<group>"; };
+		44DDB87B16C84255000F6A87 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		44DDB87C16C84255000F6A87 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		44DDB87D16C84255000F6A87 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		44DDB87E16C84255000F6A87 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		44DDB87F16C84255000F6A87 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		44DDB88016C84255000F6A87 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		44DDB88116C84255000F6A87 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		44DDB88216C84255000F6A87 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		44DDB88316C84255000F6A87 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		44DDB88416C84255000F6A87 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		44E061B416D82111000FB814 /* TEDPaginatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TEDPaginatorModel.h; sourceTree = "<group>"; };
+		44E061B516D82111000FB814 /* TEDPaginatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TEDPaginatorModel.m; sourceTree = "<group>"; };
+		44EB978916BF0CC5009FADA8 /* ToolDrawerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToolDrawerView.h; path = ToolDraw/ToolDrawerView.h; sourceTree = "<group>"; };
+		44EB978A16BF0CC5009FADA8 /* ToolDrawerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToolDrawerView.m; path = ToolDraw/ToolDrawerView.m; sourceTree = "<group>"; };
+		44EB979116BF221E009FADA8 /* UISearchBar+TEDSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+TEDSearchBar.h"; sourceTree = "<group>"; };
+		44EB979216BF221E009FADA8 /* UISearchBar+TEDSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+TEDSearchBar.m"; sourceTree = "<group>"; };
 		44ED465F1698CA620019CBAC /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		44ED46601698CA620019CBAC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		44ED46611698CA620019CBAC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -141,6 +283,19 @@
 		447312FD168CFE850035BC75 /* IMGs */ = {
 			isa = PBXGroup;
 			children = (
+				447D2C7116CAF865005C5851 /* list.png */,
+				447D2C6F16CAF117005C5851 /* button.png */,
+				442D429016C57286002B7810 /* searchLabelBG.png */,
+				442D428E16C56C09002B7810 /* play.png */,
+				442D428816C56908002B7810 /* category_scroller_bg.png */,
+				442D428916C56908002B7810 /* categoryButoonBG.png */,
+				442D428A16C56908002B7810 /* searchBarBG.png */,
+				44CF5EBC16C1A90600B4730E /* refresh.png */,
+				44CF5EBA16C1A8FD00B4730E /* home.png */,
+				44CF5EB316C184AD00B4730E /* navBar.png */,
+				44C6C3BE16C06BE600A8597D /* bg.png */,
+				449724AA16BB0B15002FDA34 /* navigationClearButtonBG.png */,
+				44CDF51916A6BD4E00DB7395 /* district_map.png */,
 			);
 			name = IMGs;
 			sourceTree = "<group>";
@@ -179,11 +334,15 @@
 			children = (
 				44814ECC168CF03700E4E8C1 /* TEDAppDelegate.h */,
 				44814ECD168CF03700E4E8C1 /* TEDAppDelegate.m */,
+				44B01CFB16A76366001C7337 /* AboutDistrictViewController */,
+				44B01CE916A73994001C7337 /* ContactsViewController */,
 				44ED46C11698CCA30019CBAC /* ArticlesControllers */,
+				44CDF51C16A6CF2000DB7395 /* DistrictMap */,
 				44ED465D1698C9120019CBAC /* MainMenu */,
 				447312FD168CFE850035BC75 /* IMGs */,
 				447312D9168CF63C0035BC75 /* NIBs */,
 				44814EE0168CF0BA00E4E8C1 /* Libraries */,
+				44DDB87916C84255000F6A87 /* open-sans */,
 				44814EC4168CF03700E4E8C1 /* Supporting Files */,
 			);
 			path = "CR Rezina News";
@@ -206,6 +365,8 @@
 		44814EE0168CF0BA00E4E8C1 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				44EB978C16BF0CCE009FADA8 /* ToolDrawer */,
+				449AC4E716A6A762002BA6BD /* NAMapKit */,
 				449FFD9B169B5BFC000A0DFE /* MBProgressHUD */,
 				449B38C71699A15A00D6CDED /* MGBox */,
 				44ED465E1698CA620019CBAC /* JSONKit */,
@@ -229,6 +390,41 @@
 				44814EEA168CF12800E4E8C1 /* NAMenuItemView.xib */,
 			);
 			path = NAMainMenu;
+			sourceTree = "<group>";
+		};
+		449AC4E716A6A762002BA6BD /* NAMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				449AC4E816A6A762002BA6BD /* callout_anchor.png */,
+				449AC4E916A6A762002BA6BD /* callout_anchor@2x.png */,
+				449AC4EA16A6A762002BA6BD /* callout_bg.png */,
+				449AC4EB16A6A762002BA6BD /* callout_bg@2x.png */,
+				449AC4EC16A6A762002BA6BD /* callout_left.png */,
+				449AC4ED16A6A762002BA6BD /* callout_left@2x.png */,
+				449AC4EE16A6A762002BA6BD /* callout_right.png */,
+				449AC4EF16A6A762002BA6BD /* callout_right@2x.png */,
+				449AC4F016A6A762002BA6BD /* NAAnnotation.h */,
+				449AC4F116A6A762002BA6BD /* NAAnnotation.m */,
+				449AC4F216A6A762002BA6BD /* NACallOutView.h */,
+				449AC4F316A6A762002BA6BD /* NACallOutView.m */,
+				449AC4F416A6A762002BA6BD /* NAMapView.h */,
+				449AC4F516A6A762002BA6BD /* NAMapView.m */,
+				449AC4F616A6A762002BA6BD /* NAPinAnnotationView.h */,
+				449AC4F716A6A762002BA6BD /* NAPinAnnotationView.m */,
+				449AC4F816A6A762002BA6BD /* pinGreen.png */,
+				449AC4F916A6A762002BA6BD /* pinGreen@2x.png */,
+				449AC4FA16A6A762002BA6BD /* pinGreenFloating.png */,
+				449AC4FB16A6A762002BA6BD /* pinGreenFloating@2x.png */,
+				449AC4FC16A6A762002BA6BD /* pinPurple.png */,
+				449AC4FD16A6A762002BA6BD /* pinPurple@2x.png */,
+				449AC4FE16A6A762002BA6BD /* pinPurpleFloating.png */,
+				449AC4FF16A6A762002BA6BD /* pinPurpleFloating@2x.png */,
+				449AC50016A6A762002BA6BD /* pinRed.png */,
+				449AC50116A6A762002BA6BD /* pinRed@2x.png */,
+				449AC50216A6A762002BA6BD /* pinRedFloating.png */,
+				449AC50316A6A762002BA6BD /* pinRedFloating@2x.png */,
+			);
+			path = NAMapKit;
 			sourceTree = "<group>";
 		};
 		449B38C71699A15A00D6CDED /* MGBox */ = {
@@ -255,6 +451,10 @@
 				4403CC46169A08DC00F0B221 /* Protocols */,
 				449B38DD1699AF2400D6CDED /* TEDArticlesScrollerViewController.h */,
 				449B38DE1699AF2400D6CDED /* TEDArticlesScrollerViewController.m */,
+				441AFC2316A087A500E005B8 /* TEDWebViewController.h */,
+				441AFC2416A087A500E005B8 /* TEDWebViewController.m */,
+				44E061B416D82111000FB814 /* TEDPaginatorModel.h */,
+				44E061B516D82111000FB814 /* TEDPaginatorModel.m */,
 			);
 			name = ArticlesScroller;
 			sourceTree = "<group>";
@@ -272,8 +472,16 @@
 		449FFD96169B3386000A0DFE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				4497249016BAB5E7002FDA34 /* NSURL+TEDWebAPIURL.h */,
+				4497249116BAB5E7002FDA34 /* NSURL+TEDWebAPIURL.m */,
 				449FFD93169B331D000A0DFE /* UIImage+TEDScale.h */,
 				449FFD94169B331D000A0DFE /* UIImage+TEDScale.m */,
+				44971EAC16A0516700C9F7CC /* NSString+TEDHTMLEntities.h */,
+				44971EAD16A0516700C9F7CC /* NSString+TEDHTMLEntities.m */,
+				44EB979116BF221E009FADA8 /* UISearchBar+TEDSearchBar.h */,
+				44EB979216BF221E009FADA8 /* UISearchBar+TEDSearchBar.m */,
+				442D427D16C53FC4002B7810 /* UINavigationBar+TEDShadow.h */,
+				442D427E16C53FC4002B7810 /* UINavigationBar+TEDShadow.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -285,6 +493,66 @@
 				449FFD9D169B5BFC000A0DFE /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		44B01CE916A73994001C7337 /* ContactsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44B01CEA16A739E4001C7337 /* TEDContactsViewController.h */,
+				44B01CEB16A739E4001C7337 /* TEDContactsViewController.m */,
+				44B01CF816A75EDC001C7337 /* TEDMGBoxScrollerView.h */,
+				44B01CF916A75EDC001C7337 /* TEDMGBoxScrollerView.m */,
+				4480E70E16D3DEAA0042CF96 /* TEDContactsModel.h */,
+				4480E70F16D3DEAA0042CF96 /* TEDContactsModel.m */,
+			);
+			name = ContactsViewController;
+			sourceTree = "<group>";
+		};
+		44B01CFB16A76366001C7337 /* AboutDistrictViewController */ = {
+			isa = PBXGroup;
+			children = (
+				44B01CFC16A763B6001C7337 /* TEDAboutDistrictViewController.h */,
+				44B01CFD16A763B6001C7337 /* TEDAboutDistrictViewController.m */,
+				44B01D0316A76642001C7337 /* aboutDistrict.plist */,
+			);
+			name = AboutDistrictViewController;
+			sourceTree = "<group>";
+		};
+		44CDF51C16A6CF2000DB7395 /* DistrictMap */ = {
+			isa = PBXGroup;
+			children = (
+				4464FC9F16A5EA7100544F1D /* TEDDistrictMapViewController.h */,
+				4464FCA016A5EA7100544F1D /* TEDDistrictMapViewController.m */,
+				44CDF51D16A6CF7900DB7395 /* LocalitiesList.plist */,
+			);
+			name = DistrictMap;
+			sourceTree = "<group>";
+		};
+		44DDB87916C84255000F6A87 /* open-sans */ = {
+			isa = PBXGroup;
+			children = (
+				44DDB87A16C84255000F6A87 /* Apache License Version 2.txt */,
+				44DDB87B16C84255000F6A87 /* OpenSans-Bold.ttf */,
+				44DDB87C16C84255000F6A87 /* OpenSans-BoldItalic.ttf */,
+				44DDB87D16C84255000F6A87 /* OpenSans-ExtraBold.ttf */,
+				44DDB87E16C84255000F6A87 /* OpenSans-ExtraBoldItalic.ttf */,
+				44DDB87F16C84255000F6A87 /* OpenSans-Italic.ttf */,
+				44DDB88016C84255000F6A87 /* OpenSans-Light.ttf */,
+				44DDB88116C84255000F6A87 /* OpenSans-LightItalic.ttf */,
+				44DDB88216C84255000F6A87 /* OpenSans-Regular.ttf */,
+				44DDB88316C84255000F6A87 /* OpenSans-Semibold.ttf */,
+				44DDB88416C84255000F6A87 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			path = "open-sans";
+			sourceTree = "<group>";
+		};
+		44EB978C16BF0CCE009FADA8 /* ToolDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				44EB978916BF0CC5009FADA8 /* ToolDrawerView.h */,
+				44EB978A16BF0CC5009FADA8 /* ToolDrawerView.m */,
+			);
+			name = ToolDrawer;
 			sourceTree = "<group>";
 		};
 		44ED465D1698C9120019CBAC /* MainMenu */ = {
@@ -312,6 +580,7 @@
 				44ED46871698CA620019CBAC /* TEDHorizontalMenu.h */,
 				44ED46881698CA620019CBAC /* TEDHorizontalMenu.m */,
 				44ED46891698CA620019CBAC /* TEDHorizontalMenuDelegate.h */,
+				442D429216C58659002B7810 /* categoriesMenuList.plist */,
 			);
 			path = TEDHorizontalMenu;
 			sourceTree = "<group>";
@@ -389,6 +658,53 @@
 				44814EF1168CF12800E4E8C1 /* NAMenuItemView.xib in Resources */,
 				44ED468D1698CA620019CBAC /* README.md in Resources */,
 				44ED46C61698CCDF0019CBAC /* TEDArticlesViewController.xib in Resources */,
+				449AC50416A6A762002BA6BD /* callout_anchor.png in Resources */,
+				449AC50516A6A762002BA6BD /* callout_anchor@2x.png in Resources */,
+				449AC50616A6A762002BA6BD /* callout_bg.png in Resources */,
+				449AC50716A6A762002BA6BD /* callout_bg@2x.png in Resources */,
+				449AC50816A6A762002BA6BD /* callout_left.png in Resources */,
+				449AC50916A6A762002BA6BD /* callout_left@2x.png in Resources */,
+				449AC50A16A6A762002BA6BD /* callout_right.png in Resources */,
+				449AC50B16A6A762002BA6BD /* callout_right@2x.png in Resources */,
+				449AC51016A6A762002BA6BD /* pinGreen.png in Resources */,
+				449AC51116A6A762002BA6BD /* pinGreen@2x.png in Resources */,
+				449AC51216A6A762002BA6BD /* pinGreenFloating.png in Resources */,
+				449AC51316A6A762002BA6BD /* pinGreenFloating@2x.png in Resources */,
+				449AC51416A6A762002BA6BD /* pinPurple.png in Resources */,
+				449AC51516A6A762002BA6BD /* pinPurple@2x.png in Resources */,
+				449AC51616A6A762002BA6BD /* pinPurpleFloating.png in Resources */,
+				449AC51716A6A762002BA6BD /* pinPurpleFloating@2x.png in Resources */,
+				449AC51816A6A762002BA6BD /* pinRed.png in Resources */,
+				449AC51916A6A762002BA6BD /* pinRed@2x.png in Resources */,
+				449AC51A16A6A762002BA6BD /* pinRedFloating.png in Resources */,
+				449AC51B16A6A762002BA6BD /* pinRedFloating@2x.png in Resources */,
+				44CDF51A16A6BD4E00DB7395 /* district_map.png in Resources */,
+				44CDF51E16A6CF7900DB7395 /* LocalitiesList.plist in Resources */,
+				44B01D0416A76642001C7337 /* aboutDistrict.plist in Resources */,
+				449724AC16BB0B15002FDA34 /* navigationClearButtonBG.png in Resources */,
+				44C6C3BF16C06BE600A8597D /* bg.png in Resources */,
+				44CF5EB416C184AD00B4730E /* navBar.png in Resources */,
+				44CF5EBB16C1A8FD00B4730E /* home.png in Resources */,
+				44CF5EBD16C1A90600B4730E /* refresh.png in Resources */,
+				442D428B16C56909002B7810 /* category_scroller_bg.png in Resources */,
+				442D428C16C56909002B7810 /* categoryButoonBG.png in Resources */,
+				442D428D16C56909002B7810 /* searchBarBG.png in Resources */,
+				442D428F16C56C09002B7810 /* play.png in Resources */,
+				442D429116C57286002B7810 /* searchLabelBG.png in Resources */,
+				442D429316C58659002B7810 /* categoriesMenuList.plist in Resources */,
+				44DDB88516C84255000F6A87 /* Apache License Version 2.txt in Resources */,
+				44DDB88616C84255000F6A87 /* OpenSans-Bold.ttf in Resources */,
+				44DDB88716C84255000F6A87 /* OpenSans-BoldItalic.ttf in Resources */,
+				44DDB88816C84255000F6A87 /* OpenSans-ExtraBold.ttf in Resources */,
+				44DDB88916C84255000F6A87 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				44DDB88A16C84255000F6A87 /* OpenSans-Italic.ttf in Resources */,
+				44DDB88B16C84255000F6A87 /* OpenSans-Light.ttf in Resources */,
+				44DDB88C16C84255000F6A87 /* OpenSans-LightItalic.ttf in Resources */,
+				44DDB88D16C84255000F6A87 /* OpenSans-Regular.ttf in Resources */,
+				44DDB88E16C84255000F6A87 /* OpenSans-Semibold.ttf in Resources */,
+				44DDB88F16C84255000F6A87 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				447D2C7016CAF117005C5851 /* button.png in Resources */,
+				447D2C7216CAF865005C5851 /* list.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +735,22 @@
 				449FFD92169B2468000A0DFE /* TEDLazyImageView.m in Sources */,
 				449FFD95169B331D000A0DFE /* UIImage+TEDScale.m in Sources */,
 				449FFD9E169B5BFC000A0DFE /* MBProgressHUD.m in Sources */,
+				44971EAE16A0516700C9F7CC /* NSString+TEDHTMLEntities.m in Sources */,
+				441AFC2516A087A500E005B8 /* TEDWebViewController.m in Sources */,
+				4464FCA116A5EA7200544F1D /* TEDDistrictMapViewController.m in Sources */,
+				449AC50C16A6A762002BA6BD /* NAAnnotation.m in Sources */,
+				449AC50D16A6A762002BA6BD /* NACallOutView.m in Sources */,
+				449AC50E16A6A762002BA6BD /* NAMapView.m in Sources */,
+				449AC50F16A6A762002BA6BD /* NAPinAnnotationView.m in Sources */,
+				44B01CEC16A739E4001C7337 /* TEDContactsViewController.m in Sources */,
+				44B01CFA16A75EDD001C7337 /* TEDMGBoxScrollerView.m in Sources */,
+				44B01CFE16A763B6001C7337 /* TEDAboutDistrictViewController.m in Sources */,
+				4497249216BAB5E7002FDA34 /* NSURL+TEDWebAPIURL.m in Sources */,
+				44EB978B16BF0CC5009FADA8 /* ToolDrawerView.m in Sources */,
+				44EB979316BF221E009FADA8 /* UISearchBar+TEDSearchBar.m in Sources */,
+				442D427F16C53FC4002B7810 /* UINavigationBar+TEDShadow.m in Sources */,
+				4480E71016D3DEAA0042CF96 /* TEDContactsModel.m in Sources */,
+				44E061B616D82111000FB814 /* TEDPaginatorModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

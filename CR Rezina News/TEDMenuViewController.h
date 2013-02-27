@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "NAMenuViewController.h"
 #import "TEDArticlesViewController.h"
+#import "TEDDistrictMapViewController.h"
+#import "TEDContactsViewController.h"
+#import "TEDAboutDistrictViewController.h"
 
 @interface TEDMenuViewController : NAMenuViewController
 
