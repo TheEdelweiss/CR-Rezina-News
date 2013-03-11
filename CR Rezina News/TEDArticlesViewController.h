@@ -63,6 +63,7 @@
 @property (nonatomic, strong) UISearchBar *searchField;
 
 @property (nonatomic, strong) NSMutableString *currentCategory;
+@property (nonatomic, strong) NSMutableString *currentCategoryName;
 @property NSUInteger currentPageNumber;
 @property (nonatomic, strong) TEDPaginatorModel *paginator;
 

@@ -111,6 +111,11 @@
                       forState: UIControlStateNormal];
         customButton.titleLabel.font = buttonFont;
         
+        [customButton setTitleShadowColor: [UIColor colorWithWhite: 0.0
+                                                       alpha: 0.6]
+                           forState: UIControlStateNormal];
+        
+        customButton.titleLabel.shadowOffset = CGSizeMake(0, 1);
         
         customButton.tag = tag++;
         [customButton addTarget: self
@@ -170,6 +175,7 @@
     }
     NSUInteger index = button.tag - baseButtonTag;
     [self.itemSelectedDelegate menuItemSelectedAtIndex: [self.categoryIDs objectAtIndex: index]];
+    [self.itemSelectedDelegate menuItemSelectedAtIndexNamed: [self.itemsTitles objectAtIndex: index]];
 }
 
 //------------------------------------------------------------------------------

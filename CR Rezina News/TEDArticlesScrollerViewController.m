@@ -126,7 +126,7 @@ if([self reloadData]) {
            
            [scroller drawBoxesWithSpeed: 0.6];
            [self.scroller setContentOffset:CGPointMake(0,0) animated:YES];
-           [scroller flashScrollIndicators];
+           //[scroller flashScrollIndicators];
            
            return YES;
        }
@@ -184,14 +184,14 @@ if([self reloadData]) {
     button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14];
     
     [button setTitleColor: [UIColor colorWithWhite: 0.9
-                                             alpha: 0.9]
+                                             alpha: 1]
                  forState: UIControlStateNormal];
     
-    [button setTitleShadowColor: [UIColor colorWithWhite: 0.2
+    [button setTitleShadowColor: [UIColor colorWithWhite: 0.0
                                                    alpha: 0.9]
                        forState: UIControlStateNormal];
     
-    button.titleLabel.shadowOffset = CGSizeMake(0, -1);
+    button.titleLabel.shadowOffset = CGSizeMake(0, 1);
     
     button.frame = CGRectMake(0, 0, 296, 34);
     

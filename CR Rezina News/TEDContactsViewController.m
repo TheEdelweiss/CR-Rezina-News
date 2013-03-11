@@ -36,7 +36,6 @@
                                                                       action: @selector(goBack)];
         
         self.navigationItem.leftBarButtonItems = [NSArray arrayWithObject: homeButton];
-        
     }
     return self;
 }
@@ -279,8 +278,6 @@ didReceiveResponse: (NSURLResponse *) response
     if ([object objectForKey: @"name"])
     {
         NSInteger ID = [[object objectForKey: @"id"] integerValue];
-        
-        NSLog(@"%d",ID);
         
         // start load collection
         [self loadCollectionAtURL: [[NSURL alloc] initWithContactEntityID: ID]];

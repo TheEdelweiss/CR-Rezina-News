@@ -69,21 +69,7 @@
     [[NSMutableString alloc] initWithFormat: @"%@/search/articles",self.baseAPIURL];
 
       searchKeywords = [searchKeywords stringByReplacingOccurrencesOfString: @" "
-                                                                 withString: @"_"];
-    
-    /*
-    searchKeywords = [searchKeywords stringByReplacingOccurrencesOfString:@"ă" withString:	@"&#259;"];
-    searchKeywords = [searchKeywords stringByReplacingOccurrencesOfString:@"Ă" withString:	@"&#258;"];
-    searchKeywords = [searchKeywords stringByReplacingOccurrencesOfString:@"â" withString:	@"&#226;"];
-    searchKeywords = [searchKeywords stringByReplacingOccurrencesOfString:@"Â" withString:	@"&#194;"];
-    searchKeywords = [searchKeywords stringByReplacingOccurrencesOfString:@"î" withString:	@"&#238;"];
-    searchKeywords = [searchKeywords stringByReplacingOccurrencesOfString:@"Î" withString:	@"&#206;"];
-    searchKeywords = [searchKeywords stringByReplacingOccurrencesOfString:@"ș" withString:	@"&#351;"];
-    searchKeywords = [searchKeywords stringByReplacingOccurrencesOfString:@"Ș" withString:	@"&#350;"];
-    searchKeywords = [searchKeywords stringByReplacingOccurrencesOfString:@"ţ" withString:	@"&#355;"];
-    
-   */
-    
+                                                                 withString: @"_"];    
     
     CFStringRef newString = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)(searchKeywords), NULL, CFSTR(":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`"), kCFStringEncodingUTF8);
     

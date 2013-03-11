@@ -32,6 +32,7 @@
 
 - (void) viewDidLoad
 {
+    
 }
 
 // -----------------------------------------------------------------------------
@@ -41,14 +42,16 @@
     [scroller.boxes removeAllObjects];
     self.numberOfItemsInScroller = [scrollerDataSource numberOfBoxesInScroller];
     
-    if (self.numberOfItemsInScroller > 0){
-        
-        for (int i = 0; i < self.numberOfItemsInScroller; i++) {
+    if (self.numberOfItemsInScroller > 0)
+    {
+        for (int i = 0; i < self.numberOfItemsInScroller; i++)
+        {
             MGBox *Box = [scrollerDataSource boxAtIndex: i];
             
             UITapGestureRecognizer *singleFingerTap =
             [[UITapGestureRecognizer alloc] initWithTarget: self
                                                     action: @selector(indexOfBox:)];
+        
             [Box addGestureRecognizer: singleFingerTap];
             
                 [scroller.boxes insertObject: Box
@@ -64,7 +67,7 @@
 
 // -----------------------------------------------------------------------------
 
-- (void)removeBox:(UIButton *)sender
+- (void)removeBox: (UIButton *)sender
 {
     [self parentBoxOf:sender];
 }
@@ -75,7 +78,8 @@
 {
     int i = [scroller.boxes indexOfObject: recognizer.view];
     
-    if (i == NSNotFound) {
+    if (i == NSNotFound)
+    {
         return -1; // not found
     }
     
@@ -97,10 +101,13 @@
 
 - (MGBox *) parentBoxOf:(UIView *)view
 {
-    while (![view.superview isKindOfClass:[MGBox class]]) {
-        if (!view.superview) {
+    while (![view.superview isKindOfClass:[MGBox class]])
+    {
+        if (!view.superview)
+        {
             return nil;
         }
+        
         view = view.superview;
     }
     return (MGBox *)view.superview;
@@ -111,7 +118,8 @@
 - (UIButton *) buttonWithTitle:(NSString *)title forAction:(SEL)selector
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14];
+    button.titleLabel.font = [UIFont fontWithName: @"HelveticaNeue-Bold"
+                                             size: 14];
     
     [button setTitleColor: [UIColor colorWithWhite: 0.9
                                              alpha: 0.9]
@@ -134,7 +142,7 @@
     
     button.layer.cornerRadius = 4;
     button.layer.masksToBounds = YES;
-    
+   
     button.backgroundColor = [UIColor colorWithRed: 0.29
                                              green: 0.32
                                               blue: 0.35
@@ -154,18 +162,20 @@
 
 #pragma mark - UIScrollViewDelegate (for snapping boxes to edges)
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
     [(MGScrollView *)scrollView snapToNearestBox];
 }
 
 // -----------------------------------------------------------------------------
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
-                  willDecelerate:(BOOL)decelerate {
-    if (!decelerate) {
+- (void)scrollViewDidEndDragging: (UIScrollView *)scrollView
+                  willDecelerate: (BOOL)decelerate
+{
+    if (!decelerate)
+    {
         [(MGScrollView *)scrollView snapToNearestBox];
     }
 }
-
 
 @end

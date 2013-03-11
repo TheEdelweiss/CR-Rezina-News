@@ -7,7 +7,10 @@
 //
 
 #import "TEDAppDelegate.h"
-#import "TEDMenuViewController.h"
+//#import "TEDMenuViewController.h"
+#include <QuartzCore/QuartzCore.h>
+#include "KYCircleMenu.h"
+#import "CircleMenuViewController.h"
 
 @interface TEDAppDelegate (Private)
 
@@ -48,28 +51,55 @@
                             withTexture: @"bg.png"];
     
     [self.window.layer setCornerRadius: 5.0f];
-    [self.window.layer setMasksToBounds:YES];
+    [self.window.layer setMasksToBounds: YES];
  
     // Override point for customization after application launch.
-    self.viewController = [[TEDMenuViewController alloc] init];
-	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
-    [self.window makeKeyAndVisible];
+    
+    
+    // Navigation Controller
+    UINavigationController * navigationController = [UINavigationController alloc];
+    
+    // Circle Menu
+    CircleMenuViewController * circleMenuViewController = [CircleMenuViewController alloc];
+    
+    // Set the cricle menu vc as the root vc
+    [navigationController initWithRootViewController: circleMenuViewController];
+    //[navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent];
+    
+    // Setup circle menu with basic configuration
+    [circleMenuViewController initWithButtonCount: 5
+                                         menuSize: 320.f
+                                       buttonSize: 85.f
+                            buttonImageNameFormat: @"main_menu_btn_%.2d.png"
+                                 centerButtonSize: 130.f
+                            centerButtonImageName: @"coatofarms.png"
+                  centerButtonBackgroundImageName: @"navigationClearButtonBG.png"];
 
+    // Set navigation controller as the root vc
+    [self.window setRootViewController:navigationController];
+    
+    [self.window makeKeyAndVisible];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+
+    /*
+    self.viewController = [[TEDMenuViewController alloc] init];
+	 self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    [self.window makeKeyAndVisible];
+    */
+     
     // splash animation
-    splashView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 320, 480)];
-    splashView.image = [UIImage imageNamed:@"bg.png"];
+    splashView = [[UIImageView alloc] initWithFrame:CGRectMake(55, 72.5, 210, 335)];
+    splashView.image = [UIImage imageNamed:@"screen_coatofarms.png"];
     [self.window addSubview:splashView];
     [self.window bringSubviewToFront:splashView];
     [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:1.0];
+    [UIView setAnimationDuration: 0.6];
     [UIView setAnimationTransition:UIViewAnimationTransitionNone forView:self.window cache:YES];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(startupAnimationDone:finished:context:)];
-    splashView.alpha = 0.0;
-    splashView.frame = CGRectMake(-60, -85, 440, 635);
+    splashView.alpha = 1;
+    splashView.frame = CGRectMake(119, 174.5, 80, 130);
     [UIView commitAnimations];
-
-   
     
     return YES;
 }

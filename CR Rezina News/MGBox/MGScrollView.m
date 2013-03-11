@@ -97,6 +97,7 @@
         }
 
         // new/existing boxes move & fade in
+       
         CGFloat finalY = 0;
         for (UIView <MGBoxProtocol> *box in boxes) {
             CGPoint pos = box.frame.origin;
@@ -106,6 +107,7 @@
             box.alpha = 1;
             finalY += size.height + box.bottomMargin;
         }
+        
 
     } completion:^(BOOL done) {
         [goneBoxes makeObjectsPerformSelector:@selector(removeFromSuperview)];

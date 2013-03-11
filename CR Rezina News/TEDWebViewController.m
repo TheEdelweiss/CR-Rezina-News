@@ -45,7 +45,7 @@
 
         self.webView = [[UIWebView alloc] initWithFrame: webFrame];
         [self.webView setDelegate: self];
-        
+        self.title = @"Articol complet";
         
         [self.webView loadRequest: request];
     }
@@ -57,7 +57,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [[self.webView scrollView] setBounces: NO];
     self.view.backgroundColor = [UIColor clearColor];
     self.webView.backgroundColor = [UIColor clearColor];
 	// Do any additional setup after loading the view.

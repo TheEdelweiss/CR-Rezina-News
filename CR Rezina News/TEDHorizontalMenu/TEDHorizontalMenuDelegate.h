@@ -14,6 +14,7 @@
 
 @required
 - (void) menuItemSelectedAtIndex:(NSString*) index;
+- (void) menuItemSelectedAtIndexNamed:(NSString*) index;
 - (void) menuIsInitSuccessful:(TEDHorizontalMenu*) menu;
 
 @end

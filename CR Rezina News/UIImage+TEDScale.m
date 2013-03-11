@@ -17,8 +17,8 @@
     UIGraphicsBeginImageContext(size);
     
     // Draw the scaled image in the current context
-    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
-    
+     [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+
     // Create a new image from current context
     UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
     

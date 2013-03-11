@@ -20,7 +20,7 @@
             receivedData,
             collectionConnection,
             collection, scrollerIsInit,
-            menuIsInit, currentCategory,
+            menuIsInit, currentCategory,currentCategoryName,
             searchField, toolDrawerView,
             HUD, paginator, currentPageNumber,
             searchResultsIsShow;
@@ -50,6 +50,7 @@
         
         self.navigationItem.leftBarButtonItems = [NSArray arrayWithObject: homeButton];
         self.currentCategory = [[NSMutableString alloc] initWithString: @"all"];
+        self.currentCategoryName = [[NSMutableString alloc]initWithString:@"Toate"];
         
         self.paginator = [[TEDPaginatorModel alloc] initModel];
         
@@ -180,6 +181,7 @@
 {
     [searchBar resignFirstResponder];
     
+    
     NSString *searchKeywords = [searchBar.text stringByReplacingOccurrencesOfString: @"."
                                                                          withString: @""];
     
@@ -205,7 +207,7 @@
              self.searchResultsIsShow = YES;
              
              [self loadCollectionAtURL: [[NSURL alloc]initWithSearchKeywords: searchKeywords]];
-
+             self.currentCategoryName = [[NSMutableString alloc] initWithString: @"Rezultatele Căutării"];
          }
 }
 // -----------------------------------------------------------------------------
@@ -303,6 +305,12 @@
         [self.collection addObject: modelObject];
    }
     
+    if ([self.currentCategoryName isEqual: @"Rezultatele Căutării"])
+    {
+      self.title = [[NSString alloc] initWithFormat: @"%@ ", self.currentCategoryName];
+    } else
+    self.title = [[NSString alloc] initWithFormat: @"%@ - pag. %d", self.currentCategoryName, self.currentPageNumber];
+    
     if(!self.scrollerIsInit)
     {
         [articlesScrollerView start];
@@ -313,7 +321,6 @@
     if(!self.menuIsInit)
     {
         [self.catMenu startWithURL: [[NSURL alloc] initWithAllCategories: NSNotFound]];
-        
     }
 }
 
@@ -447,6 +454,9 @@ didReceiveResponse: (NSURLResponse *) response
 
     TEDWebViewController *webView = [[TEDWebViewController alloc]initWithRequest:request];
     
+   // self.toolDrawerView.hidden =YES;
+     [UIView animateWithDuration: 0.1 animations:^{self.toolDrawerView.alpha = 0;}];
+    
     [self.navigationController pushViewController: webView
                                          animated: YES];
 }
@@ -562,10 +572,16 @@ didReceiveResponse: (NSURLResponse *) response
 #pragma mark - TEDHorizontalMenuDelegate delegate
 // -----------------------------------------------------------------------------
 
+- (void) menuItemSelectedAtIndexNamed:(NSString*) index
+{
+    self.currentCategoryName = [[NSMutableString alloc] initWithString: index];
+}
+
+// -----------------------------------------------------------------------------
+
 - (void) menuItemSelectedAtIndex:(NSString*) index
 {
     // for refresh
-    
     [self.currentCategory setString: index];
     self.currentPageNumber = 1;
     
@@ -686,5 +702,9 @@ didReceiveResponse: (NSURLResponse *) response
   }
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [UIView animateWithDuration: 0.4 animations:^{self.toolDrawerView.alpha = 1;}];
+}
 @end
 
